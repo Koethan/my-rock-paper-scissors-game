@@ -1,0 +1,73 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+import random
+
+computer = ([rock, paper, scissors])
+c1 = (computer[0])
+c2 = (computer[1])
+c3 = (computer[2])
+
+new_choice = [c1, c2, c3]
+answer = random.choice(new_choice)
+
+rps = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n "))
+
+if rps >= 3:
+  print("You did not follow the rules!")
+else:
+  
+  if (rps) == 0 and answer == c1:
+    print(rock + "Computer chose rock:" + answer + "Draw")
+  elif (rps) == 0 and answer == c2:
+    print(rock + "Computer chose paper:" + answer + "You Lose")
+  elif (rps) == 0 and answer == c3:
+    print(rock + "Computer chose scissors:" + answer + "You Win")
+  elif (rps) == 1 and answer == c1:
+    print(paper + "Computer chose rock:" + answer + "You Win")
+  elif (rps) == 1 and answer == c2:
+    print(paper + "Computer chose paper:" + answer + "Draw")
+  elif (rps) == 1 and answer == c3:
+    print(paper + "Computer chose scissors:" + answer + "You Lose")
+  elif (rps) == 2 and answer == c1:
+    print(scissors + "Computer chose rock:" + answer + "You Lose")
+  elif (rps) == 2 and answer == c2:
+    print(scissors + "Computer chose paper:" + answer + "You Win")
+  elif (rps) == 2 and answer == c3:
+    print(scissors + "Computer chose scissors:" + answer + "Draw")
+
+
+
+
+#elif rps == "1":
+  #print(paper + "Computer chose:" + answer)
+#elif rps == "2":
+  #print(scissors+ "Computer chose:" + answer)
+
+#if rps == 0 and answer == 0:
+  #print(Draw)
